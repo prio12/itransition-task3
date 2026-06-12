@@ -21,7 +21,7 @@ function isNaturalNumber(str) {
   return num > 0;
 }
 
-app.get("/maksudurrahmanprio_gmail_com", (req, res) => {
+app.get("/app/maksudurrahmanprio_gmail_com", (req, res) => {
   const { x, y } = req.query;
   if (!isNaturalNumber(x) || !isNaturalNumber(y)) {
     res.setHeader("Content-Type", "text/plain");
