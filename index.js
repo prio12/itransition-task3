@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 function getGCD(a, b) {
-  while (b !== 0) {
+  while (b !== 0n) {
     let temp = b;
     b = a % b;
     a = temp;
@@ -28,8 +28,8 @@ app.get("/maksudurrahmanprio_gmail_com", (req, res) => {
     return res.send("NaN");
   }
 
-  const numX = parseInt(x, 10);
-  const numY = parseInt(y, 10);
+  const numX = BigInt(x);
+  const numY = BigInt(y);
 
   const result = getLCM(numX, numY);
   res.setHeader("Content-Type", "text/plain");
